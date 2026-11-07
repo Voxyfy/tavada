@@ -1,0 +1,49 @@
+name: tavada
+description: "Tavada - evdeki malzemelerden Türk yemeği ve eksik malzeme alternatifi öneren uygulama."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  hugeicons: ^4.4.0
+  intl: ">=0.20.2 <0.21.0"
+  shared_preferences: ^2.5.6
+  url_launcher: ^6.3.3
+  wakelock_plus: ^1.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/images/
+    - assets/images/ingredients/
+    - assets/images/dishes/
+    - assets/images/actions/
+    - assets/data/
+  fonts:
+    # Değişken yazı tipleri; kalınlık FontVariation('wght') ile veriliyor.
+    - family: Bricolage
+      fonts:
+        - asset: assets/fonts/BricolageGrotesque.ttf
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter.ttf
+
+# Uygulama ikonu: `dart run flutter_launcher_icons` (kaynak Higgsfield, assets/icon/icon.png 1024²).
+flutter_launcher_icons:
+  image_path: assets/icon/icon.png
+  ios: true
+  remove_alpha_ios: true
+  android: false
